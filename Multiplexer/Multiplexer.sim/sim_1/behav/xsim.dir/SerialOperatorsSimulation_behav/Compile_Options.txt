@@ -1,0 +1,1 @@
+-wto "d4c0b95f3e3a46228d4921c0844de261" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "SerialOperatorsSimulation_behav" "xil_defaultlib.SerialOperatorsSimulation" -log "elaborate.log" 

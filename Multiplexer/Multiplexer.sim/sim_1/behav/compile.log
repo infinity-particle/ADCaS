@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/BSUIR/github/ADCaS/Multiplexer/Multiplexer.srcs/sources_1/new/UsingSerialOperators.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity UsingSerialOperators
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/BSUIR/github/ADCaS/Multiplexer/Multiplexer.srcs/sim_1/new/SerialOperatorsSimulation.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity SerialOperatorsSimulation
