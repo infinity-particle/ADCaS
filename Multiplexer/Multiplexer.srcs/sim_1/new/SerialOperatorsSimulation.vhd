@@ -21,10 +21,11 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.std_logic_unsigned.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -44,8 +45,8 @@ architecture Behavioral of SerialOperatorsSimulation is
                W : out STD_LOGIC);
     end component;
     
-    signal DATA : std_logic_vector(7 downto 0);
-    signal SEL : std_logic_vector(2 downto 0);
+    signal DATA : std_logic_vector(7 downto 0) := "00000000";
+    signal SEL : std_logic_vector(2 downto 0) := "000";
     signal G : std_logic := '0'; 
     signal Y, W : std_logic;
 begin
@@ -53,10 +54,21 @@ begin
     
     process
     begin
-        SEL <= "000";
-        DATA <= "00000001";
-        wait for 800 ns;
-        G <= '1';
+    for i in 0 to 1 loop
+            wait for 400 ns;
+            for j in 0 to 7 loop
+            wait for 400 ns;
+                for k in 0 to 255 loop
+                    wait for 400 ns;
+                    DATA <= DATA + 1;
+                    wait for 400 ns;
+                end loop;
+                SEL <= SEL + 1; 
+                wait for 400 ns;
+            end loop;
+            G <= '1';
+            wait for 400 ns;
+        end loop;
         wait;
     end process;
 end Behavioral;

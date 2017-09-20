@@ -1,6 +1,6 @@
 Vivado Simulator 2015.2
 Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto d4c0b95f3e3a46228d4921c0844de261 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot SerialOperatorsSimulation_behav xil_defaultlib.SerialOperatorsSimulation -log elaborate.log 
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto d4c0b95f3e3a46228d4921c0844de261 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot LogicalElementsSimulation_behav xil_defaultlib.LogicalElementsSimulation -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -9,7 +9,10 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package ieee.std_logic_1164
-Compiling architecture behavioral of entity xil_defaultlib.UsingSerialOperators [usingserialoperators_default]
-Compiling architecture behavioral of entity xil_defaultlib.serialoperatorssimulation
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.UsingLogicalElements [usinglogicalelements_default]
+Compiling architecture behavioral of entity xil_defaultlib.logicalelementssimulation
 Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot SerialOperatorsSimulation_behav
+Built simulation snapshot LogicalElementsSimulation_behav

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Sep 14 22:44:15 2017
+# Process ID: 10404
+# Log file: D:/BSUIR/github/ADCaS/Multiplexer/vivado.log
+# Journal file: D:/BSUIR/github/ADCaS/Multiplexer\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/BSUIR/github/ADCaS/Multiplexer/Multiplexer.xpr
+launch_simulation
+source SerialOperatorsSimulation.tcl
+close_sim
