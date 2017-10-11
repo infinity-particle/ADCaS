@@ -37,36 +37,40 @@ end testbench;
 
 architecture Behavioral of testbench is
 component counter is
-port(number : in std_logic_vector(3 downto 0);
+port(a, b, c, d : in std_logic;
      load : in std_logic;
      clk : in std_logic;
      direction : in std_logic;
      ent : in std_logic;
      enp : in std_logic;
-     result : out std_logic_vector(3 downto 0);
+     q_a, q_b, q_c, q_d : out std_logic;
      rco : out std_logic);
 end component;
 
     signal load : std_logic := '1';
-    signal clk : std_logic;
+    signal clk : std_logic := '1';
     signal direction : std_logic := '1';
-    signal number : std_logic_vector(3 downto 0) := "0000";
+    signal a : std_logic := '0'; 
+    signal b : std_logic := '0'; 
+    signal c : std_logic := '0'; 
+    signal d : std_logic := '0';
     signal ent : std_logic := '1';
     signal enp : std_logic := '1';
-    signal result : std_logic_vector(3 downto 0);
-    signal rco : std_logic;
+    signal q_a : std_logic := '0'; 
+    signal q_b : std_logic := '0'; 
+    signal q_c : std_logic := '0'; 
+    signal q_d : std_logic := '0';
+    signal rco : std_logic := '0';
     
-    constant clk_period : time := 100 ns;
+    constant clk_period : time := 200 ns;
 begin
 
-    UUT : counter port map(number => number, load => load, clk => clk,
-                             direction => direction, ent => ent, enp => enp,
-                             result => result, rco => rco);
+    UUT : counter port map(a => a, b => b, c => c, d => d, load => load, clk => clk, direction => direction, 
+    ent => ent, enp => enp, q_a => q_a, q_b => q_b, q_c => q_c, q_d => q_d, rco => rco);
+    
     clk_process : process
     begin
-        clk <= '0';
-        wait for clk_period/2;
-        clk <= '1';
+        clk <= not clk;
         wait for clk_period/2;
     end process;
 end Behavioral;

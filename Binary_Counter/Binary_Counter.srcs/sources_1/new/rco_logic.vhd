@@ -34,25 +34,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity rco_logic is
     Port ( direction : in STD_LOGIC;
            ent : in STD_LOGIC;
-           t : in std_logic_vector(3 downto 0);
+           t_0 : in std_logic;
+           t_1 : in std_logic;
+           t_2 : in std_logic;
+           t_3 : in std_logic;
            rco : out STD_LOGIC);
 end rco_logic;
 
 architecture Behavioral of rco_logic is
-    signal result, result_1 : std_logic;
-
-component and_6 is
-    Port ( x_0 : in std_logic;
-    x_1 : in std_logic;
-    x_2 : in std_logic;
-    x_3 : in std_logic;
-    x_4 : in std_logic;
-    x_5 : in std_logic;
-           y : out STD_LOGIC);
-end component;
 begin
-    A0 : and_6 port map(t(0), t(1), t(2), t(3), direction, not ent, result);
-    A1 : and_6 port map(t(0), t(1), t(2), t(3), not direction, not ent, result_1);
-    
-    rco <= not(result or result_1);  
+    rco <= (t_0 and t_1 and t_2 and t_3 and (not ent) and direction) nor (t_0 and t_1 and t_2 and t_3 and (not ent) and (not direction));  
 end Behavioral;

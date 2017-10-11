@@ -32,14 +32,16 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity count_logic is
-    Port ( direction : in std_logic_vector(3 downto 0);
+    Port ( enable : in std_logic;
            load : in STD_LOGIC;
            q : in STD_LOGIC;
-           number_bit : in STD_LOGIC;
-           result : out STD_LOGIC);
+           a : in STD_LOGIC;
+           output : out STD_LOGIC;
+           not_output : out std_logic);
 end count_logic;
 
 architecture Behavioral of count_logic is
 begin
-    result <= not (((direction(0) and direction(1) and direction(2) and direction(3)) xor (q and load)) or ((not load) and number_bit));
+    output <= ((load and q) xor (enable)) or ((not load) and a);
+    not_output <= not ((load and q) xor (enable)) or ((not load) and a); 
 end Behavioral;

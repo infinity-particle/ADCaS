@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 10/07/2017 04:43:40 AM
+-- Create Date: 10/11/2017 04:27:09 PM
 -- Design Name: 
--- Module Name: direction_logic - Behavioral
+-- Module Name: count_logic_3 - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,20 +31,20 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity direction_logic is
-    Port ( direction : in STD_LOGIC;
-           q : in STD_LOGIC;
-           result : out std_logic);
-end direction_logic;
+entity count_logic_3 is
+    Port ( enable : in std_logic;
+           t_0 : in std_logic;
+           t_1 : in std_logic;
+           t_2 : in std_logic;
+          load : in STD_LOGIC;
+          q : in STD_LOGIC;
+          a : in STD_LOGIC;
+          output : out STD_LOGIC;
+          not_output : out std_logic);
+end count_logic_3;
 
-architecture Behavioral of direction_logic is
-    signal temp : std_logic;
+architecture Behavioral of count_logic_3 is
 begin
-    temp <= not (direction and (not q)) or ((not direction) and q);
-    result <= temp;
-    
-    debug_temp : process(temp)
-    begin
-        report "The value of 'result' in direction_logic is " & std_logic'image(temp);
-    end process; 
+     output <= ((load and q) xor (enable and t_0 and t_1 and t_2)) or ((not load) and a);
+     not_output <= not ((load and q) xor (enable and t_0 and t_1 and t_2)) or ((not load) and a);
 end Behavioral;
