@@ -34,10 +34,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity direction_logic is
     Port ( direction : in STD_LOGIC;
            q : in STD_LOGIC;
+           not_q : in std_logic;
            result : out std_logic);
 end direction_logic;
 
 architecture Behavioral of direction_logic is
 begin
-    result <= not (direction and (not q)) or ((not direction) and q);
+    result <= (direction and (not q)) nor ((not direction) and q);
 end Behavioral;

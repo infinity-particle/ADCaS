@@ -40,11 +40,11 @@ begin
                result <= 'U';
                 not_result <= 'U';
             when "01" =>
-                result <= '1';
-                not_result <= '0';
-            when "10" =>
-               result <= '0';
+                result <= '0';
                 not_result <= '1';
+            when "10" =>
+               result <= '1';
+                not_result <= '0';
             when "11" =>
                 if rising_edge(clk) then
                     case jk_signals is
@@ -82,6 +82,25 @@ begin
 --				end if;
 --			end if;
 --		end process;
+--    process (clk, set, reset)
+--    begin
+--        if reset = '0' then 
+--            result <= '0';
+--            not_result <= '1';
+--        elsif set = '0' then
+--            result <= '1';
+--            not_result <= '0';
+--        elsif rising_edge(clk) and jump = '1' and kill = '0' then
+--            result <= '1';
+--            not_result <= '0';
+--        elsif rising_edge(clk) and jump = '0' and kill = '1' then
+--            result <= '0';
+--            not_result <= '1';
+--        elsif rising_edge(clk) and jump = '1' and kill = '1' then
+--            result <= not result;
+--            not_result <= not not_result;
+--        end if;
+--    end process;
 end Behavioral;
 
 --library IEEE;

@@ -37,13 +37,11 @@ entity count_logic_2 is
            t_1 : in std_logic;
           load : in STD_LOGIC;
           q : in STD_LOGIC;
-          a : in STD_LOGIC;
-          output : out STD_LOGIC;
-          not_output : out std_logic);
+          c : in STD_LOGIC;
+          output : out STD_LOGIC);
 end count_logic_2;
 
 architecture Behavioral of count_logic_2 is
 begin
-    output <= ((load and q) xor (enable and t_0 and t_1)) or ((not load) and a);
-    not_output <= not ((load and q) xor (enable and t_0 and t_1)) or ((not load) and a);
+    output <= ((load and q) xor (enable and t_0 and t_1)) or ((not load) and c);
 end Behavioral;

@@ -48,19 +48,19 @@ port(a, b, c, d : in std_logic;
 end component;
 
     signal load : std_logic := '1';
-    signal clk : std_logic := '0';
+    signal clk : std_logic := '1';
     signal direction : std_logic := '1';
     signal a : std_logic := '0'; 
     signal b : std_logic := '1'; 
     signal c : std_logic := '1'; 
     signal d : std_logic := '0';
-    signal ent : std_logic := '1';
-    signal enp : std_logic := '1';
-    signal q_a : std_logic; 
-    signal q_b : std_logic; 
-    signal q_c : std_logic; 
-    signal q_d : std_logic;
-    signal rco : std_logic;
+    signal ent : std_logic := '0';
+    signal enp : std_logic := '0';
+    signal q_a : std_logic := '0'; 
+    signal q_b : std_logic := '0'; 
+    signal q_c : std_logic := '0'; 
+    signal q_d : std_logic := '0';
+    signal rco : std_logic := '0';
     
     constant clk_period : time := 200 ns;
 begin
@@ -73,15 +73,15 @@ begin
         wait for clk_period/2;
     end process;
     
-    process
-    begin
-        load <= not load;
-        wait for 1000 ns;
-    end process;
+--    process
+--    begin
+--        load <= not load;
+--        wait for 1000 ns;
+--    end process;
     
-    process
-        begin
-            ent <= not ent;
-            wait for 2000 ns;
-        end process;
+--    process
+--        begin
+--            ent <= not ent;
+--            wait for 2000 ns;
+--        end process;
 end Behavioral;

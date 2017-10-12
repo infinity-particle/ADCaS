@@ -47,29 +47,29 @@ architecture Behavioral of counter is
 --    signal d : std_logic_vector(3 downto 0);
 --    signal not_d : std_logic_vector(3 downto 0);
 --    signal t: std_logic_vector(3 downto 0);
-    signal d_0 : std_logic; 
-    signal d_1 : std_logic; 
-    signal d_2 : std_logic; 
-    signal d_3 : std_logic;
-    signal not_d_0 : std_logic;
-    signal not_d_1 : std_logic;
-    signal not_d_2 : std_logic; 
-    signal not_d_3 : std_logic;
-    signal t_0 : std_logic; 
-    signal t_1 : std_logic; 
-    signal t_2 : std_logic; 
-    signal t_3 : std_logic;
+    signal d_0 : std_logic := '0'; 
+    signal d_1 : std_logic := '0'; 
+    signal d_2 : std_logic := '0'; 
+    signal d_3 : std_logic := '0';
+    signal not_d_0 : std_logic := '1';
+    signal not_d_1 : std_logic := '1';
+    signal not_d_2 : std_logic := '1'; 
+    signal not_d_3 : std_logic := '1';
+    signal t_0 : std_logic := '0'; 
+    signal t_1 : std_logic := '0'; 
+    signal t_2 : std_logic := '0'; 
+    signal t_3 : std_logic := '0';
     signal enable : std_logic;
     --signal output : std_logic_vector(3 downto 0);
     --signal not_output : std_logic_vector(3 downto 0);
-    signal q_0 : std_logic; 
-    signal q_1 : std_logic; 
-    signal q_2 : std_logic; 
-    signal q_3 : std_logic;
-    signal not_q_0 : std_logic; 
-    signal not_q_1 : std_logic; 
-    signal not_q_2 : std_logic; 
-    signal not_q_3 : std_logic;
+    signal q_0 : std_logic := '0'; 
+    signal q_1 : std_logic := '0'; 
+    signal q_2 : std_logic := '0'; 
+    signal q_3 : std_logic := '0';
+    signal not_q_0 : std_logic := '1'; 
+    signal not_q_1 : std_logic := '1'; 
+    signal not_q_2 : std_logic := '1'; 
+    signal not_q_3 : std_logic := '1';
     signal set : std_logic := '1';
     signal reset : std_logic := '1';
     
@@ -86,6 +86,7 @@ architecture Behavioral of counter is
     component direction_logic is
         Port ( direction : in STD_LOGIC;
                q : in STD_LOGIC;
+               not_q : in std_logic;
                result : out std_logic);
     end component;
     
@@ -111,8 +112,7 @@ component count_logic is
            load : in STD_LOGIC;
            q : in STD_LOGIC;
            a : in STD_LOGIC;
-           output : out STD_LOGIC;
-           not_output : out std_logic);
+           output : out STD_LOGIC);
 end component;
 
 component count_logic_1 is
@@ -120,9 +120,8 @@ component count_logic_1 is
             t_0 : in std_logic;
            load : in STD_LOGIC;
            q : in STD_LOGIC;
-           a : in STD_LOGIC;
-           output : out STD_LOGIC;
-           not_output : out std_logic);
+           b : in STD_LOGIC;
+           output : out STD_LOGIC);
 end component;
 
 component count_logic_2 is
@@ -131,9 +130,8 @@ component count_logic_2 is
            t_1 : in std_logic;
           load : in STD_LOGIC;
           q : in STD_LOGIC;
-          a : in STD_LOGIC;
-          output : out STD_LOGIC;
-          not_output : out std_logic);
+          c : in STD_LOGIC;
+          output : out STD_LOGIC);
 end component;
 
 component count_logic_3 is
@@ -143,9 +141,8 @@ component count_logic_3 is
            t_2 : in std_logic;
           load : in STD_LOGIC;
           q : in STD_LOGIC;
-          a : in STD_LOGIC;
-          output : out STD_LOGIC;
-          not_output : out std_logic);
+          d : in STD_LOGIC;
+          output : out STD_LOGIC);
 end component;
  
 begin
@@ -167,21 +164,21 @@ begin
 
     ENABLE_0 : enable_logic port map(ent, enp, load, enable);
 
-    T0 : direction_logic port map(direction, q_0, t_0);
-    T1 : direction_logic port map(direction, q_1, t_1);
-    T2 : direction_logic port map(direction, q_2, t_2);
-    T3 : direction_logic port map(direction, q_3, t_3);
+    T0 : direction_logic port map(direction, q_0, not_q_0, t_0);
+    T1 : direction_logic port map(direction, q_1, not_q_1, t_1);
+    T2 : direction_logic port map(direction, q_2, not_q_2, t_2);
+    T3 : direction_logic port map(direction, q_3, not_q_3, t_3);
 
-    D0 : count_logic port map(enable, load, q_0, a, d_0, not_d_0);
-    D1 : count_logic_1 port map(enable, t_0, load, q_1, b, d_1, not_d_1);
-    D2 : count_logic_2 port map(enable, t_0, t_1, load, q_2, c, d_2, not_d_2);
-    D3 : count_logic_3 port map(enable, t_0, t_1, t_2, load, q_3, d, d_3, not_d_3); 
+    D0 : count_logic port map(enable, load, q_0, a, d_0);
+    D1 : count_logic_1 port map(enable, t_0, load, q_1, b, d_1);
+    D2 : count_logic_2 port map(enable, t_0, t_1, load, q_2, c, d_2);
+    D3 : count_logic_3 port map(enable, t_0, t_1, t_2, load, q_3, d, d_3); 
 
 
-     L0 : jk_flip_flop port map(d_0, not_d_0, set, reset, clk, q_0, not_q_0);
-     L1 : jk_flip_flop port map(d_1, not_d_1, set, reset, clk, q_1, not_q_1);
-     L2 : jk_flip_flop port map(d_2, not_d_2, set, reset, clk, q_2, not_q_2);
-     L3 : jk_flip_flop port map(d_3, not_d_3, set, reset, clk, q_3, not_q_3);
+     L0 : jk_flip_flop port map(d_0, not d_0, set, reset, clk, q_0, not_q_0);
+     L1 : jk_flip_flop port map(d_1, not d_1, set, reset, clk, q_1, not_q_1);
+     L2 : jk_flip_flop port map(d_2, not d_2, set, reset, clk, q_2, not_q_2);
+     L3 : jk_flip_flop port map(d_3, not d_3, set, reset, clk, q_3, not_q_3);
                                 
     RCO_0 : rco_logic port map(direction, ent, t_0, t_1, t_2, t_3, rco);
      
