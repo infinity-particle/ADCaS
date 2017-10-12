@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Wed Oct 11 22:54:16 2017
-# Process ID: 924
+# Start of session at: Wed Oct 11 23:22:07 2017
+# Process ID: 10820
 # Log file: D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.runs/synth_1/counter.vds
 # Journal file: D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -13,66 +13,58 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 260.859 ; gain = 87.129
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 260.766 ; gain = 87.051
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-1565] actual for formal port kill is neither a static name nor a globally static expression [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:173]
-WARNING: [Synth 8-1565] actual for formal port kill is neither a static name nor a globally static expression [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:180]
-WARNING: [Synth 8-1565] actual for formal port kill is neither a static name nor a globally static expression [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:187]
-WARNING: [Synth 8-1565] actual for formal port kill is neither a static name nor a globally static expression [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:194]
 INFO: [Synth 8-638] synthesizing module 'counter' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:46]
-INFO: [Synth 8-3491] module 'enable_logic' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/enable_logic.vhd:34' bound to instance 'ENABLE_0' of component 'enable_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:159]
+INFO: [Synth 8-3491] module 'enable_logic' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/enable_logic.vhd:34' bound to instance 'ENABLE_0' of component 'enable_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:163]
 INFO: [Synth 8-638] synthesizing module 'enable_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/enable_logic.vhd:41]
 INFO: [Synth 8-256] done synthesizing module 'enable_logic' (1#1) [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/enable_logic.vhd:41]
-INFO: [Synth 8-3491] module 'direction_logic' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/direction_logic.vhd:34' bound to instance 'T0' of component 'direction_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:161]
+INFO: [Synth 8-3491] module 'direction_logic' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/direction_logic.vhd:34' bound to instance 'T0' of component 'direction_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:165]
 INFO: [Synth 8-638] synthesizing module 'direction_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/direction_logic.vhd:40]
 WARNING: [Synth 8-312] ignoring unsynthesizable construct: non-constant operand to 'image [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/direction_logic.vhd:48]
 INFO: [Synth 8-63] RTL assertion: "The value of 'result' in direction_logic is <non-const>" [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/direction_logic.vhd:48]
 INFO: [Synth 8-256] done synthesizing module 'direction_logic' (2#1) [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/direction_logic.vhd:40]
-INFO: [Synth 8-3491] module 'direction_logic' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/direction_logic.vhd:34' bound to instance 'T1' of component 'direction_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:162]
-INFO: [Synth 8-3491] module 'direction_logic' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/direction_logic.vhd:34' bound to instance 'T2' of component 'direction_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:163]
-INFO: [Synth 8-3491] module 'direction_logic' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/direction_logic.vhd:34' bound to instance 'T3' of component 'direction_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:164]
-INFO: [Synth 8-3491] module 'count_logic' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic.vhd:34' bound to instance 'D0' of component 'count_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:166]
-INFO: [Synth 8-638] synthesizing module 'count_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'count_logic' (3#1) [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic.vhd:42]
-INFO: [Synth 8-3491] module 'count_logic_1' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_1.vhd:34' bound to instance 'D1' of component 'count_logic_1' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'count_logic_1' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_1.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'count_logic_1' (4#1) [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_1.vhd:43]
-INFO: [Synth 8-3491] module 'count_logic_2' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_2.vhd:34' bound to instance 'D2' of component 'count_logic_2' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:168]
-INFO: [Synth 8-638] synthesizing module 'count_logic_2' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_2.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'count_logic_2' (5#1) [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_2.vhd:44]
-INFO: [Synth 8-3491] module 'count_logic_3' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_3.vhd:34' bound to instance 'D3' of component 'count_logic_3' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:169]
-INFO: [Synth 8-638] synthesizing module 'count_logic_3' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_3.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'count_logic_3' (6#1) [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_3.vhd:45]
-INFO: [Synth 8-3491] module 'jk_flip_flop' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd:13' bound to instance 'L0' of component 'jk_flip_flop' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:172]
+INFO: [Synth 8-3491] module 'direction_logic' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/direction_logic.vhd:34' bound to instance 'T1' of component 'direction_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:166]
+INFO: [Synth 8-3491] module 'direction_logic' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/direction_logic.vhd:34' bound to instance 'T2' of component 'direction_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:167]
+INFO: [Synth 8-3491] module 'direction_logic' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/direction_logic.vhd:34' bound to instance 'T3' of component 'direction_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:168]
+INFO: [Synth 8-3491] module 'count_logic' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic.vhd:34' bound to instance 'D0' of component 'count_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'count_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'count_logic' (3#1) [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic.vhd:43]
+INFO: [Synth 8-3491] module 'count_logic_1' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_1.vhd:34' bound to instance 'D1' of component 'count_logic_1' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:171]
+INFO: [Synth 8-638] synthesizing module 'count_logic_1' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_1.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'count_logic_1' (4#1) [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_1.vhd:44]
+INFO: [Synth 8-3491] module 'count_logic_2' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_2.vhd:34' bound to instance 'D2' of component 'count_logic_2' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'count_logic_2' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_2.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'count_logic_2' (5#1) [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_2.vhd:45]
+INFO: [Synth 8-3491] module 'count_logic_3' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_3.vhd:34' bound to instance 'D3' of component 'count_logic_3' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:173]
+INFO: [Synth 8-638] synthesizing module 'count_logic_3' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_3.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'count_logic_3' (6#1) [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_3.vhd:46]
+INFO: [Synth 8-3491] module 'jk_flip_flop' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd:13' bound to instance 'L0' of component 'jk_flip_flop' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:176]
 INFO: [Synth 8-638] synthesizing module 'jk_flip_flop' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd:23]
-INFO: [Synth 8-226] default block is never used [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd:34]
-INFO: [Synth 8-226] default block is never used [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd:46]
-WARNING: [Synth 8-614] signal 'jump' is read in the process but is not in the sensitivity list [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd:26]
-WARNING: [Synth 8-614] signal 'kill' is read in the process but is not in the sensitivity list [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd:26]
 INFO: [Synth 8-256] done synthesizing module 'jk_flip_flop' (7#1) [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd:23]
-INFO: [Synth 8-3491] module 'jk_flip_flop' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd:13' bound to instance 'L1' of component 'jk_flip_flop' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:179]
-INFO: [Synth 8-3491] module 'jk_flip_flop' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd:13' bound to instance 'L2' of component 'jk_flip_flop' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:186]
-INFO: [Synth 8-3491] module 'jk_flip_flop' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd:13' bound to instance 'L3' of component 'jk_flip_flop' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:193]
-INFO: [Synth 8-3491] module 'rco_logic' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/rco_logic.vhd:34' bound to instance 'RCO_0' of component 'rco_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:201]
+INFO: [Synth 8-3491] module 'jk_flip_flop' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd:13' bound to instance 'L1' of component 'jk_flip_flop' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:177]
+INFO: [Synth 8-3491] module 'jk_flip_flop' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd:13' bound to instance 'L2' of component 'jk_flip_flop' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:178]
+INFO: [Synth 8-3491] module 'jk_flip_flop' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd:13' bound to instance 'L3' of component 'jk_flip_flop' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:179]
+INFO: [Synth 8-3491] module 'rco_logic' declared at 'D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/rco_logic.vhd:34' bound to instance 'RCO_0' of component 'rco_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:181]
 INFO: [Synth 8-638] synthesizing module 'rco_logic' [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/rco_logic.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'rco_logic' (8#1) [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/rco_logic.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'counter' (9#1) [D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd:46]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 294.086 ; gain = 120.355
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 295.043 ; gain = 121.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 294.086 ; gain = 120.355
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 295.043 ; gain = 121.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tfbg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 294.086 ; gain = 120.355
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 295.043 ; gain = 121.328
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a200tfbg676-2
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 301.238 ; gain = 127.508
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 302.289 ; gain = 128.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -90,8 +82,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	                1 Bit    Registers := 8     
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 4     
-	   4 Input      1 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -120,8 +111,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -134,14 +124,14 @@ BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 467.426 ; gain = 293.695
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 467.445 ; gain = 293.730
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 468.680 ; gain = 294.949
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 468.699 ; gain = 294.984
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 468.680 ; gain = 294.949
+Finished Parallel Reinference  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 468.699 ; gain = 294.984
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -149,28 +139,26 @@ Report RTL Partitions:
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
 No constraint files found.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\L3/result_reg )
-WARNING: [Synth 8-3332] Sequential element (\L3/result_reg ) is unused and will be removed from module counter.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 487.465 ; gain = 313.734
+Finished Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 487.469 ; gain = 313.754
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 487.465 ; gain = 313.734
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 487.469 ; gain = 313.754
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 487.465 ; gain = 313.734
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 487.469 ; gain = 313.754
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 487.465 ; gain = 313.734
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 487.469 ; gain = 313.754
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -182,7 +170,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 487.465 ; gain = 313.734
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 487.469 ; gain = 313.754
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -196,14 +184,11 @@ Start IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5365] Flop L0/not_result_reg is being inverted and renamed to L0/not_result_reg_inv.
-INFO: [Synth 8-5365] Flop L1/not_result_reg is being inverted and renamed to L1/not_result_reg_inv.
-INFO: [Synth 8-5365] Flop L2/not_result_reg is being inverted and renamed to L2/not_result_reg_inv.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 487.465 ; gain = 313.734
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 487.469 ; gain = 313.754
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -216,7 +201,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 487.465 ; gain = 313.734
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 487.469 ; gain = 313.754
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -228,13 +213,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 487.465 ; gain = 313.734
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 487.469 ; gain = 313.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 487.465 ; gain = 313.734
+Start Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 487.469 ; gain = 313.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 487.465 ; gain = 313.734
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 487.469 ; gain = 313.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -251,34 +236,35 @@ Report Cell Usage:
 |      |Cell |Count |
 +------+-----+------+
 |1     |BUFG |     1|
-|2     |LUT1 |     1|
+|2     |LUT1 |     4|
 |3     |LUT2 |     1|
-|4     |LUT4 |     2|
-|5     |LUT5 |     3|
-|6     |LUT6 |     2|
-|7     |FDRE |     7|
-|8     |IBUF |     8|
-|9     |OBUF |     5|
+|4     |LUT3 |     1|
+|5     |LUT4 |     2|
+|6     |LUT5 |     3|
+|7     |LUT6 |     7|
+|8     |FDRE |     8|
+|9     |IBUF |     9|
+|10    |OBUF |     5|
 +------+-----+------+
 
 Report Instance Areas: 
 +------+---------+---------------+------+
 |      |Instance |Module         |Cells |
 +------+---------+---------------+------+
-|1     |top      |               |    30|
-|2     |  L0     |jk_flip_flop   |     6|
+|1     |top      |               |    41|
+|2     |  L0     |jk_flip_flop   |    13|
 |3     |  L1     |jk_flip_flop_0 |     4|
-|4     |  L2     |jk_flip_flop_1 |     3|
-|5     |  L3     |jk_flip_flop_2 |     2|
+|4     |  L2     |jk_flip_flop_1 |     5|
+|5     |  L3     |jk_flip_flop_2 |     4|
 +------+---------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 487.465 ; gain = 313.734
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 487.469 ; gain = 313.754
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 487.465 ; gain = 280.570
-Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 487.465 ; gain = 313.734
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 487.469 ; gain = 280.668
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 487.469 ; gain = 313.754
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -286,8 +272,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-48 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+42 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 546.492 ; gain = 340.754
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 546.492 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 11 22:54:26 2017...
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 546.996 ; gain = 341.340
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 546.996 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 11 23:22:16 2017...

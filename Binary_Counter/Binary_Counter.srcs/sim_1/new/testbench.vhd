@@ -48,29 +48,40 @@ port(a, b, c, d : in std_logic;
 end component;
 
     signal load : std_logic := '1';
-    signal clk : std_logic := '1';
+    signal clk : std_logic := '0';
     signal direction : std_logic := '1';
     signal a : std_logic := '0'; 
-    signal b : std_logic := '0'; 
-    signal c : std_logic := '0'; 
+    signal b : std_logic := '1'; 
+    signal c : std_logic := '1'; 
     signal d : std_logic := '0';
     signal ent : std_logic := '1';
     signal enp : std_logic := '1';
-    signal q_a : std_logic := '0'; 
-    signal q_b : std_logic := '0'; 
-    signal q_c : std_logic := '0'; 
-    signal q_d : std_logic := '0';
-    signal rco : std_logic := '0';
+    signal q_a : std_logic; 
+    signal q_b : std_logic; 
+    signal q_c : std_logic; 
+    signal q_d : std_logic;
+    signal rco : std_logic;
     
     constant clk_period : time := 200 ns;
 begin
 
-    UUT : counter port map(a => a, b => b, c => c, d => d, load => load, clk => clk, direction => direction, 
-    ent => ent, enp => enp, q_a => q_a, q_b => q_b, q_c => q_c, q_d => q_d, rco => rco);
+    UUT : counter port map(a, b, c, d, load, clk, direction, ent, enp, q_a, q_b, q_c, q_d, rco);
     
     clk_process : process
     begin
         clk <= not clk;
         wait for clk_period/2;
     end process;
+    
+    process
+    begin
+        load <= not load;
+        wait for 1000 ns;
+    end process;
+    
+    process
+        begin
+            ent <= not ent;
+            wait for 2000 ns;
+        end process;
 end Behavioral;

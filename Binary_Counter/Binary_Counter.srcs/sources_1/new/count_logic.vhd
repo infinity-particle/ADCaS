@@ -43,5 +43,5 @@ end count_logic;
 architecture Behavioral of count_logic is
 begin
     output <= ((load and q) xor (enable)) or ((not load) and a);
-    not_output <= not ((load and q) xor (enable)) or ((not load) and a); 
+    not_output <= ((load and q) xor (enable)) nor ((not load) and a); 
 end Behavioral;

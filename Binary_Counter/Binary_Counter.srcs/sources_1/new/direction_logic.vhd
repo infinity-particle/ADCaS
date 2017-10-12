@@ -38,13 +38,6 @@ entity direction_logic is
 end direction_logic;
 
 architecture Behavioral of direction_logic is
-    signal temp : std_logic;
 begin
-    temp <= not (direction and (not q)) or ((not direction) and q);
-    result <= temp;
-    
-    debug_temp : process(temp)
-    begin
-        report "The value of 'result' in direction_logic is " & std_logic'image(temp);
-    end process; 
+    result <= not (direction and (not q)) or ((not direction) and q);
 end Behavioral;

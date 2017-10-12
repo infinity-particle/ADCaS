@@ -47,29 +47,29 @@ architecture Behavioral of counter is
 --    signal d : std_logic_vector(3 downto 0);
 --    signal not_d : std_logic_vector(3 downto 0);
 --    signal t: std_logic_vector(3 downto 0);
-    signal d_0 : std_logic := '0'; 
-    signal d_1 : std_logic := '0'; 
-    signal d_2 : std_logic := '0'; 
-    signal d_3 : std_logic := '0';
-    signal not_d_0 : std_logic := '1';
-    signal not_d_1 : std_logic := '1';
-    signal not_d_2 : std_logic := '1'; 
-    signal not_d_3 : std_logic := '1';
-    signal t_0 : std_logic := '0'; 
-    signal t_1 : std_logic := '0'; 
-    signal t_2 : std_logic := '0'; 
-    signal t_3 : std_logic := '0';
+    signal d_0 : std_logic; 
+    signal d_1 : std_logic; 
+    signal d_2 : std_logic; 
+    signal d_3 : std_logic;
+    signal not_d_0 : std_logic;
+    signal not_d_1 : std_logic;
+    signal not_d_2 : std_logic; 
+    signal not_d_3 : std_logic;
+    signal t_0 : std_logic; 
+    signal t_1 : std_logic; 
+    signal t_2 : std_logic; 
+    signal t_3 : std_logic;
     signal enable : std_logic;
     --signal output : std_logic_vector(3 downto 0);
     --signal not_output : std_logic_vector(3 downto 0);
-    signal q_0 : std_logic := '0'; 
-    signal q_1 : std_logic := '0'; 
-    signal q_2 : std_logic := '0'; 
-    signal q_3 : std_logic := '0';
-    signal not_q_0 : std_logic := '1'; 
-    signal not_q_1 : std_logic := '1'; 
-    signal not_q_2 : std_logic := '1'; 
-    signal not_q_3 : std_logic := '1';
+    signal q_0 : std_logic; 
+    signal q_1 : std_logic; 
+    signal q_2 : std_logic; 
+    signal q_3 : std_logic;
+    signal not_q_0 : std_logic; 
+    signal not_q_1 : std_logic; 
+    signal not_q_2 : std_logic; 
+    signal not_q_3 : std_logic;
     signal set : std_logic := '1';
     signal reset : std_logic := '1';
     
@@ -160,6 +160,11 @@ begin
 --t_2 <= (not ((q_2 and (not direction)) or (not_q_2 and direction)));
 --t_3 <= (not ((q_3 and (not direction)) or (not_q_3 and direction)));
 
+    q_a <= not not_q_0;
+        q_b <= not not_q_1;
+       q_c <= not not_q_2;
+       q_d <= not not_q_3;
+
     ENABLE_0 : enable_logic port map(ent, enp, load, enable);
 
     T0 : direction_logic port map(direction, q_0, t_0);
@@ -170,7 +175,7 @@ begin
     D0 : count_logic port map(enable, load, q_0, a, d_0, not_d_0);
     D1 : count_logic_1 port map(enable, t_0, load, q_1, b, d_1, not_d_1);
     D2 : count_logic_2 port map(enable, t_0, t_1, load, q_2, c, d_2, not_d_2);
-    D3 : count_logic_3 port map(enable, t_0, t_1, t_2, q_3, d, d_3, not_d_3); 
+    D3 : count_logic_3 port map(enable, t_0, t_1, t_2, load, q_3, d, d_3, not_d_3); 
 
 
      L0 : jk_flip_flop port map(d_0, not_d_0, set, reset, clk, q_0, not_q_0);
@@ -224,11 +229,6 @@ begin
 --        d_3 <= ((q_3 and load) xor (enable and t_0 and t_1 and t_2)) or ((not load) and d);
         
 --        rco <= not (t_0 and t_1 and t_2 and t_3 and direction and (not ent)) or (t_0 and t_1 and t_2 and t_3 and (not direction) and (not ent));
-
-        q_a <= not not_q_0;
-        q_b <= not not_q_1;
-       q_c <= not not_q_2;
-       q_d <= not not_q_3;
         
 --    not_d_0 <= not d_0;
 --    not_d_1 <= not d_1;
