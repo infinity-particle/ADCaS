@@ -21,7 +21,7 @@ entity jk_flip_flop is
 end jk_flip_flop;
 
 architecture Behavioral of jk_flip_flop is
-    signal result, not_result : std_logic := '0';
+    signal result, not_result : std_logic;
 begin
     process (clk, set, reset, jump, kill)
             variable jk_signals : std_logic_vector(1 downto 0) := "00";
@@ -55,96 +55,7 @@ begin
                 result <= 'U'; not_result <= 'U';
         end case;
     end process;
---        q <= result;
---		not_q <= not_result;
 
---		process(clk,reset)
---		begin
---			if(reset = '0') then           --notR the output.
---				result <= '0';
---				not_result <= '1';
---			elsif( rising_edge(clk) ) then
---				if(jump='0' and kill='0') then       --No change in the output
---					NULL;
---				elsif(jump='0' and kill='1') then    --Set the output.
---					result <= '0';
---					not_result <= '1';
---				elsif(jump='1' and kill='0') then    --Reset the output.
---					result <= '1';
---					not_result <= '0';
---				else                           --Toggle the output.
---					result <= not result;
---					not_result <= not not_result;
---				end if;
---			end if;
---		end process;
---    process (clk, set, reset)
---    begin
---        if reset = '0' then 
---            result <= '0';
---            not_result <= '1';
---        elsif set = '0' then
---            result <= '1';
---            not_result <= '0';
---        elsif rising_edge(clk) and jump = '1' and kill = '0' then
---            result <= '1';
---            not_result <= '0';
---        elsif rising_edge(clk) and jump = '0' and kill = '1' then
---            result <= '0';
---            not_result <= '1';
---        elsif rising_edge(clk) and jump = '1' and kill = '1' then
---            result <= not result;
---            not_result <= not not_result;
---        end if;
---    end process;
-    
     q <= result;
-        not_q <= not_result;
+    not_q <= not_result;
 end Behavioral;
-
---library IEEE;
---use IEEE.STD_LOGIC_1164.ALL;
-
----- Uncomment the following library declaration if using
----- arithmetic functions with Signed or Unsigned values
-----use IEEE.NUMERIC_STD.ALL;
-
----- Uncomment the following library declaration if instantiating
----- any Xilinx leaf cells in this code.
-----library UNISIM;
-----use UNISIM.VComponents.all;
-
---entity jk_flip_flop is
---    Port ( jump : in STD_LOGIC;
---           kill : in STD_LOGIC;
---           set : in STD_LOGIC;
---           reset : in STD_LOGIC;
---           clk : in STD_LOGIC;
---           q : inout STD_LOGIC := '0';
---           not_q : inout STD_LOGIC := '1');
---end jk_flip_flop;
-
---architecture Behavioral of jk_flip_flop is
-
---begin
---    process (clk, set, reset, jump, kill)
---    begin
---        if reset = '0' then 
---            q <= '0';
---            not_q <= '1';
---        elsif set = '0' then
---            q <= '1';
---            not_q <= '0';
---        elsif rising_edge(clk) and jump = '1' and kill = '0' then
---            q <= '1';
---            not_q <= '0';
---        elsif rising_edge(clk) and jump = '0' and kill = '1' then
---            q <= '0';
---            not_q <= '1';
---        elsif rising_edge(clk) and jump = '1' and kill = '1' then
---            q <= not q;
---            not_q <= not not_q;
---        end if;
---    end process;
-
---end Behavioral;

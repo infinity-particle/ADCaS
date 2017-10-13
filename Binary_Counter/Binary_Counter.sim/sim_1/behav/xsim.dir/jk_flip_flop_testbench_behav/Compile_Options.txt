@@ -1,1 +1,0 @@
--wto "66041cf4de554a16902f41146a439dd1" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "jk_flip_flop_testbench_behav" "xil_defaultlib.jk_flip_flop_testbench" -log "elaborate.log" 
