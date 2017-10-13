@@ -43,29 +43,31 @@ port(a, b, c, d : in std_logic;
      direction : in std_logic;
      ent : in std_logic;
      enp : in std_logic;
-     q_a, q_b, q_c, q_d : out std_logic;
+     --q_a, q_b, q_c, q_d : out std_logic;
+     result : out std_logic_vector(3 downto 0);
      rco : out std_logic);
 end component;
 
-    signal load : std_logic := '1';
+    signal load : std_logic;
     signal clk : std_logic := '1';
-    signal direction : std_logic := '1';
-    signal a : std_logic := '0'; 
+    signal direction : std_logic := '0';
+    signal a : std_logic := '1'; 
     signal b : std_logic := '1'; 
     signal c : std_logic := '1'; 
-    signal d : std_logic := '0';
+    signal d : std_logic := '1';
     signal ent : std_logic := '0';
     signal enp : std_logic := '0';
-    signal q_a : std_logic := '0'; 
-    signal q_b : std_logic := '0'; 
-    signal q_c : std_logic := '0'; 
-    signal q_d : std_logic := '0';
-    signal rco : std_logic := '0';
+--    signal q_a : std_logic; 
+--    signal q_b : std_logic; 
+--    signal q_c : std_logic; 
+--    signal q_d : std_logic;
+    signal result : std_logic_vector(3 downto 0);
+    signal rco : std_logic;
     
-    constant clk_period : time := 200 ns;
+    constant clk_period : time := 100 ns;
 begin
 
-    UUT : counter port map(a, b, c, d, load, clk, direction, ent, enp, q_a, q_b, q_c, q_d, rco);
+    UUT : counter port map(a, b, c, d, load, clk, direction, ent, enp, result, rco);
     
     clk_process : process
     begin
@@ -73,11 +75,13 @@ begin
         wait for clk_period/2;
     end process;
     
---    process
---    begin
---        load <= not load;
---        wait for 1000 ns;
---    end process;
+    process
+    begin
+        load <= '0';
+        wait for 120 ns;
+        load <= '1';
+        wait;
+    end process;
     
 --    process
 --        begin

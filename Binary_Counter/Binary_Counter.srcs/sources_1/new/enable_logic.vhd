@@ -40,5 +40,5 @@ end enable_logic;
 
 architecture Behavioral of enable_logic is
 begin
-    result <= (not ent) and (not enp) and (not load);
+    result <= ((not ent) and (not enp) and load);
 end Behavioral;

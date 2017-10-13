@@ -39,7 +39,8 @@ port(a, b, c, d : in std_logic;
      direction : in std_logic;
      ent : in std_logic;
      enp : in std_logic;
-     q_a, q_b, q_c, q_d : out std_logic;
+     --q_a, q_b, q_c, q_d : out std_logic;
+     result : out std_logic_vector(3 downto 0);
      rco : out std_logic);
 end counter;
 
@@ -47,29 +48,26 @@ architecture Behavioral of counter is
 --    signal d : std_logic_vector(3 downto 0);
 --    signal not_d : std_logic_vector(3 downto 0);
 --    signal t: std_logic_vector(3 downto 0);
-    signal d_0 : std_logic := '0'; 
-    signal d_1 : std_logic := '0'; 
-    signal d_2 : std_logic := '0'; 
-    signal d_3 : std_logic := '0';
-    signal not_d_0 : std_logic := '1';
-    signal not_d_1 : std_logic := '1';
-    signal not_d_2 : std_logic := '1'; 
-    signal not_d_3 : std_logic := '1';
-    signal t_0 : std_logic := '0'; 
-    signal t_1 : std_logic := '0'; 
-    signal t_2 : std_logic := '0'; 
-    signal t_3 : std_logic := '0';
+    signal d_0 : std_logic; 
+    signal d_1 : std_logic; 
+    signal d_2 : std_logic; 
+    signal d_3 : std_logic;
+    signal t_0 : std_logic; 
+    signal t_1 : std_logic; 
+    signal t_2 : std_logic; 
+    signal t_3 : std_logic;
     signal enable : std_logic;
     --signal output : std_logic_vector(3 downto 0);
     --signal not_output : std_logic_vector(3 downto 0);
-    signal q_0 : std_logic := '0'; 
-    signal q_1 : std_logic := '0'; 
-    signal q_2 : std_logic := '0'; 
-    signal q_3 : std_logic := '0';
-    signal not_q_0 : std_logic := '1'; 
-    signal not_q_1 : std_logic := '1'; 
-    signal not_q_2 : std_logic := '1'; 
-    signal not_q_3 : std_logic := '1';
+    signal q_0 : std_logic; 
+    signal q_1 : std_logic; 
+    signal q_2 : std_logic; 
+    signal q_3 : std_logic;
+--signal result : std_logic_vector(3 downto 0);
+    signal not_q_0 : std_logic; 
+    signal not_q_1 : std_logic; 
+    signal not_q_2 : std_logic; 
+    signal not_q_3 : std_logic;
     signal set : std_logic := '1';
     signal reset : std_logic := '1';
     
@@ -157,10 +155,15 @@ begin
 --t_2 <= (not ((q_2 and (not direction)) or (not_q_2 and direction)));
 --t_3 <= (not ((q_3 and (not direction)) or (not_q_3 and direction)));
 
-    q_a <= not not_q_0;
-        q_b <= not not_q_1;
-       q_c <= not not_q_2;
-       q_d <= not not_q_3;
+--    q_a <= not not_q_0;
+--        q_b <= not not_q_1;
+--       q_c <= not not_q_2;
+--       q_d <= not not_q_3;
+       
+       result(0) <= not not_q_0;
+       result(1) <= not not_q_1;
+      result(2) <= not not_q_2;
+      result(3) <= not not_q_3;
 
     ENABLE_0 : enable_logic port map(ent, enp, load, enable);
 

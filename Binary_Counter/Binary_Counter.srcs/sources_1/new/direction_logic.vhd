@@ -40,5 +40,5 @@ end direction_logic;
 
 architecture Behavioral of direction_logic is
 begin
-    result <= (direction and (not q)) nor ((not direction) and q);
+    result <= (direction and not_q) nor ((not direction) and q);
 end Behavioral;
