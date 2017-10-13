@@ -15,14 +15,14 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:ac701:part0:1.2 [current_project]
 read_vhdl -library xil_defaultlib {
-  D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_1.vhd
-  D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/rco_logic.vhd
-  D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd
-  D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/enable_logic.vhd
   D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/direction_logic.vhd
   D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_3.vhd
   D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_2.vhd
+  D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic_1.vhd
   D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/count_logic.vhd
+  D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/rco_logic.vhd
+  D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd
+  D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/enable_logic.vhd
   D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd
 }
 synth_design -top counter -part xc7a200tfbg676-2

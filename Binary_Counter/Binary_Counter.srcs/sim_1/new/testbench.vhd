@@ -50,11 +50,11 @@ end component;
 
     signal load : std_logic;
     signal clk : std_logic := '1';
-    signal direction : std_logic := '0';
-    signal a : std_logic := '1'; 
-    signal b : std_logic := '1'; 
-    signal c : std_logic := '1'; 
-    signal d : std_logic := '1';
+    signal direction : std_logic := '1';
+    signal a : std_logic := '0'; 
+    signal b : std_logic := '0'; 
+    signal c : std_logic := '0'; 
+    signal d : std_logic := '0';
     signal ent : std_logic := '0';
     signal enp : std_logic := '0';
 --    signal q_a : std_logic; 
@@ -77,10 +77,27 @@ begin
     
     process
     begin
+        a <= '1';
+        b <= '0';
+        c <= '1';
+        d <= '1';
         load <= '0';
         wait for 120 ns;
         load <= '1';
         wait;
+    end process;
+    
+    process
+    begin
+        wait for 625 ns;
+        ent <= '1';
+        enp <= '1';
+        wait for 50 ns;
+        direction <= not direction;
+        wait for 50 ns;
+        ent <= '0';
+        enp <= '0';
+        wait for 1150 ns;
     end process;
     
 --    process
