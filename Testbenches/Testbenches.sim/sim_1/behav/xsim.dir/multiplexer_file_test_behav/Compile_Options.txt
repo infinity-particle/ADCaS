@@ -1,0 +1,1 @@
+-wto "9f22450ee7a94012952b558d8e137b7e" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "multiplexer_file_test_behav" "xil_defaultlib.multiplexer_file_test" -log "elaborate.log" 

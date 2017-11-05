@@ -2,10 +2,13 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Fri Oct 27 19:17:19 2017
-# Process ID: 10792
+# Start of session at: Fri Oct 13 00:14:20 2017
+# Process ID: 10552
 # Log file: D:/BSUIR/github/ADCaS/Binary_Counter/vivado.log
 # Journal file: D:/BSUIR/github/ADCaS/Binary_Counter\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.xpr
+launch_simulation
+source testbench.tcl
+close_sim

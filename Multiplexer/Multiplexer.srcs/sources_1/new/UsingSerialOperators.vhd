@@ -33,7 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity UsingSerialOperators is
     Port ( DATA : in STD_LOGIC_VECTOR (7 downto 0);
-               SEL : in STD_LOGIC_VECTOR (2 downto 0);
+               data_select : in STD_LOGIC_VECTOR (2 downto 0);
                G : in STD_LOGIC;
                Y : out STD_LOGIC;
                W : out STD_LOGIC);
@@ -42,10 +42,10 @@ end UsingSerialOperators;
 architecture Behavioral of UsingSerialOperators is
     signal temp : std_logic;
 begin
-    process(G, DATA, SEL)
+    process(G, DATA, data_select)
     begin
     if G = '0' then
-        case SEL is
+        case data_select is
             when "000" => temp <= DATA(0);
             when "001" => temp <= DATA(1);
             when "010" => temp <= DATA(2);

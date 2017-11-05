@@ -33,7 +33,7 @@ use ieee.numeric_std.all;
 --use UNISIM.VComponents.all;
 
 entity counter is
-port(a, b, c, d : in std_logic;
+port(data : in std_logic_vector(3 downto 0);
      load : in std_logic;
      clk : in std_logic;
      direction : in std_logic;
@@ -150,10 +150,10 @@ begin
     T2 : direction_logic port map(direction, q_2, not_q_2, t_2);
     T3 : direction_logic port map(direction, q_3, not_q_3, t_3);
 
-    D0 : count_logic port map(enable, load, q_0, a, d_0);
-    D1 : count_logic_1 port map(enable, t_0, load, q_1, b, d_1);
-    D2 : count_logic_2 port map(enable, t_0, t_1, load, q_2, c, d_2);
-    D3 : count_logic_3 port map(enable, t_0, t_1, t_2, load, q_3, d, d_3); 
+    D0 : count_logic port map(enable, load, q_0, data(0), d_0);
+    D1 : count_logic_1 port map(enable, t_0, load, q_1, data(1), d_1);
+    D2 : count_logic_2 port map(enable, t_0, t_1, load, q_2, data(2), d_2);
+    D3 : count_logic_3 port map(enable, t_0, t_1, t_2, load, q_3, data(3), d_3); 
 
 
     L0 : jk_flip_flop port map(d_0, not d_0, set, reset, clk, q_0, not_q_0);
