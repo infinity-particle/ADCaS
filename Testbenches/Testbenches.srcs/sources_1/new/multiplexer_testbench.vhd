@@ -63,18 +63,18 @@ architecture Behavioral of multiplexer_device_test is
                    for j in 0 to 7 loop
                         for k in 0 to 255 loop
                             data <= data + 1;
-                            assert y_0 = y_1 report "Expected Y = " & integer'image(to_integer(unsigned'('0' & y_0))) & ", but get Y = " & integer'image(to_integer(unsigned'('0' & y_1)));
-                            assert w_0 = w_1 report "Expected Y = " & integer'image(to_integer(unsigned'('0' & w_0))) & ", but get Y = " & integer'image(to_integer(unsigned'('0' & w_1)));
+                            assert y_0 = y_1 report "Expected Y = " & std_logic'image(y_0) & ", but get Y = " & std_logic'image(y_1);
+                            assert w_0 = w_1 report "Expected W = " & std_logic'image(w_0) & ", but get W = " & std_logic'image(w_1);
                             wait for 50 ns;
                         end loop;
                         data_select <= data_select + 1;
-                        assert y_0 = y_1 report "Expected Y = " & integer'image(to_integer(unsigned'('0' & y_0))) & ", but get Y = " & integer'image(to_integer(unsigned'('0' & y_1)));
-                        assert w_0 = w_1 report "Expected Y = " & integer'image(to_integer(unsigned'('0' & w_0))) & ", but get Y = " & integer'image(to_integer(unsigned'('0' & w_1))); 
+                        assert y_0 = y_1 report "Expected Y = " & std_logic'image(y_0) & ", but get Y = " & std_logic'image(y_1);
+                        assert w_0 = w_1 report "Expected W = " & std_logic'image(w_0) & ", but get W = " & std_logic'image(w_1); 
                        wait for 50 ns;
                    end loop;
                    g <= '1';
-                    assert y_0 = y_1 report "Expected Y = " & integer'image(to_integer(unsigned'('0' & y_0))) & ", but get Y = " & integer'image(to_integer(unsigned'('0' & y_1)));
-                    assert w_0 = w_1 report "Expected Y = " & integer'image(to_integer(unsigned'('0' & w_0))) & ", but get Y = " & integer'image(to_integer(unsigned'('0' & w_1)));
+                    assert y_0 = y_1 report "Expected Y = " & std_logic'image(y_0) & ", but get Y = " & std_logic'image(y_1);
+                    assert w_0 = w_1 report "Expected W = " & std_logic'image(w_0) & ", but get W = " & std_logic'image(w_1);
                    wait for 50 ns;
                end loop;
        end process;
