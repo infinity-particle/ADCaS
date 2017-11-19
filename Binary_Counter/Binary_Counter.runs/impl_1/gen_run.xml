@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1511080696">
+  <File Type="OPT-DCP" Name="counter_with_inner_clk_opt.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="PWROPT-DCP" Name="counter_with_inner_clk_pwropt.dcp"/>
+  <File Type="ROUTE-DCP" Name="counter_with_inner_clk_routed.dcp"/>
+  <File Type="PA-TCL" Name="counter_with_inner_clk.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="OPT-DRC" Name="counter_with_inner_clk_drc_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="counter_with_inner_clk_drc_pwropted.rpt"/>
+  <File Type="OPT-HWDEF" Name="counter_with_inner_clk.hwdef"/>
+  <File Type="PLACE-DCP" Name="counter_with_inner_clk_placed.dcp"/>
+  <File Type="PLACE-IO" Name="counter_with_inner_clk_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="counter_with_inner_clk_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="counter_with_inner_clk_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="counter_with_inner_clk_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="counter_with_inner_clk_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="counter_with_inner_clk_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="counter_with_inner_clk_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="counter_with_inner_clk_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="counter_with_inner_clk_physopt.dcp"/>
+  <File Type="RDI-RDI" Name="counter_with_inner_clk.vdi"/>
+  <File Type="PHYSOPT-DRC" Name="counter_with_inner_clk_drc_physopted.rpt"/>
+  <File Type="ROUTE-DRC" Name="counter_with_inner_clk_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="counter_with_inner_clk_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="counter_with_inner_clk_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="counter_with_inner_clk_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="counter_with_inner_clk_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="counter_with_inner_clk_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="counter_with_inner_clk_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="counter_with_inner_clk_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="counter_with_inner_clk_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="counter_with_inner_clk_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="counter_with_inner_clk_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="counter_with_inner_clk_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="counter_with_inner_clk_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="counter_with_inner_clk_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="counter_with_inner_clk_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="counter_with_inner_clk.bit"/>
+  <File Type="BG-BIN" Name="counter_with_inner_clk.bin"/>
+  <File Type="BITSTR-MSK" Name="counter_with_inner_clk.msk"/>
+  <File Type="BITSTR-RBT" Name="counter_with_inner_clk.rbt"/>
+  <File Type="BITSTR-NKY" Name="counter_with_inner_clk.nky"/>
+  <File Type="BITSTR-BMM" Name="counter_with_inner_clk_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="counter_with_inner_clk.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="counter_with_inner_clk.sysdef"/>
+  <File Type="BG-BGN" Name="counter_with_inner_clk.bgn"/>
+  <File Type="BG-DRC" Name="counter_with_inner_clk.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/direction_logic.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/count_logic_3.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/count_logic_2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/count_logic_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/count_logic.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/rco_logic.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/jk_flip_flop.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/enable_logic.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/counter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/counter_with_inner_clk.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/and_6.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/d_latch.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="counter_with_inner_clk"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/counter.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

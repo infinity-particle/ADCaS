@@ -24,7 +24,11 @@ read_vhdl -library xil_defaultlib {
   D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/jk_flip_flop.vhd
   D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/enable_logic.vhd
   D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter.vhd
+  D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/sources_1/new/counter_with_inner_clk.vhd
 }
-synth_design -top counter -part xc7a200tfbg676-2
-write_checkpoint -noxdef counter.dcp
-catch { report_utilization -file counter_utilization_synth.rpt -pb counter_utilization_synth.pb }
+read_xdc D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/constrs_1/new/counter.xdc
+set_property used_in_implementation false [get_files D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.srcs/constrs_1/new/counter.xdc]
+
+synth_design -top counter_with_inner_clk -part xc7a200tfbg676-2
+write_checkpoint -noxdef counter_with_inner_clk.dcp
+catch { report_utilization -file counter_with_inner_clk_utilization_synth.rpt -pb counter_with_inner_clk_utilization_synth.pb }

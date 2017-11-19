@@ -2,9 +2,9 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Sun Nov 19 11:33:34 2017
-# Process ID: 12732
-# Log file: D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.runs/synth_1/counter_with_inner_clk.vds
-# Journal file: D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.runs/synth_1\vivado.jou
+# Start of session at: Sun Nov 19 11:38:18 2017
+# Process ID: 13336
+# Log file: D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.runs/impl_1/counter_with_inner_clk.vdi
+# Journal file: D:/BSUIR/github/ADCaS/Binary_Counter/Binary_Counter.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source counter_with_inner_clk.tcl -notrace
